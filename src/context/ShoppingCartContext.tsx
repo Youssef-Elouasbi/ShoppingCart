@@ -16,6 +16,7 @@ type ShoppingCartContext = {
     increaseItemQuantity: (id: number) => void
     decreaseItemQuantity: (id: number) => void
     removeFromCart: (id: number) => void
+    addToCart: (id: number) => void
     cartQuantity: number
     cartItems: CartItem[]
 }
@@ -26,7 +27,6 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
     const [cartItems, setCartItems] = useLocalStorage<CartItem[]>("shopping-cart", [])
     const [ShoppingCartSlide, setShoppingCartSlide] = useState(false)
     const cartQuantity = cartItems.reduce((quantity, item) => item.quantity + quantity, 0)
-
     function OpenCart() {
         setShoppingCartSlide(true)
     }
@@ -38,15 +38,22 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         return cartItems.find(item => item.id === id)?.quantity || 0
     }
 
+    function addToCart(id: number) {
+        setCartItems(() => {
+            const newItem: CartItem = { id: id, quantity: 1 }
+            return [...cartItems, newItem]
+        })
+    }
+
     function increaseItemQuantity(id: number) {
         setCartItems(cartItems => {
-            if (cartItems.find(item => item.id === id) == null) {
-                return [...cartItems, { id, quantity: 1 }]
-            } else {
-                return cartItems.map(item => {
-                    return item.id === id ? { ...item, quantity: item.quantity + 1 } : item
-                })
-            }
+            // if (cartItems.find(item => item.id === id) == null) {
+            //     return [...cartItems, { id, quantity: 1 }]
+            // } else {
+            return cartItems.map(item => {
+                return item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+            })
+            // }
         })
     }
     function decreaseItemQuantity(id: number) {
@@ -67,7 +74,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         )
     }
     return (
-        <ShoppingCartContext.Provider value={{ getItemQuantity, increaseItemQuantity, decreaseItemQuantity, removeFromCart, cartItems, cartQuantity, OpenCart, CloseCart }}>
+        <ShoppingCartContext.Provider value={{ getItemQuantity, increaseItemQuantity, decreaseItemQuantity, removeFromCart, cartItems, cartQuantity, OpenCart, CloseCart, addToCart }}>
             {children}
             <ShoppingCart isOpen={ShoppingCartSlide} />
         </ShoppingCartContext.Provider>

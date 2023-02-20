@@ -26,7 +26,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
                         })
                     }
                     <div className='ms-auto fw-bold fs-5'>
-                        {formatCurrency(totalPrice)}
+                        Total : {formatCurrency(totalPrice)}
                     </div>
                 </Stack>
             </Offcanvas.Body>
