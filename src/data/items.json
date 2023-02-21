@@ -1,30 +1,135 @@
 [
     {
         "id": 1,
-        "name": "Book",
+        "name": "Air Jordan 1 Mid SE",
         "price": 10.99,
-        "imgUrl": "/images/book.jpg",
-        "categorie": "Cat 1"
+        "imgUrl": "/images/Nike/Air Jordan 1 Mid SE.png",
+        "categorie": "Nike"
     },
     {
         "id": 2,
-        "name": "Computer",
+        "name": "Air Jordan 5 Retro SE",
         "price": 1199,
-        "imgUrl": "/images/computer.jpg",
-        "categorie": "Cat 2"
+        "imgUrl": "/images/Nike/Air Jordan 5 Retro SE.png",
+        "categorie": "Nike"
     },
     {
         "id": 3,
-        "name": "Banana",
+        "name": "Nike Aire Force",
         "price": 1.05,
-        "imgUrl": "/images/banana.jpg",
-        "categorie": "Cat 3"
+        "imgUrl": "/images/Nike/Nike Aire Force.png",
+        "categorie": "Nike"
     },
     {
         "id": 4,
-        "name": "Car",
+        "name": "Nike Aire VaporaMax 2021 FK",
         "price": 14000,
-        "imgUrl": "/images/car.jpg",
-        "categorie": "Cat 4"
+        "imgUrl": "/images/Nike/Nike Aire VaporaMax 2021 FK.png",
+        "categorie": "Nike"
+    },
+    {
+        "id": 5,
+        "name": "Nike Aire Zoom Flight 95",
+        "price": 14000,
+        "imgUrl": "/images/Nike/Nike Aire Zoom Flight 95.png",
+        "categorie": "Nike"
+    },
+    {
+        "id": 6,
+        "name": "Nike invincible 3",
+        "price": 14000,
+        "imgUrl": "/images/Nike/Nike invincible 3.png",
+        "categorie": "Nike"
+    },
+    {
+        "id": 7,
+        "name": "Nike ZoomX Dragonfly",
+        "price": 14000,
+        "imgUrl": "/images/Nike/Nike ZoomX Dragonfly.png",
+        "categorie": "Nike"
+    },
+    {
+        "id": 8,
+        "name": "Busentiz Pro",
+        "price": 14000,
+        "imgUrl": "/images/Adidas/Busentiz Pro.png",
+        "categorie": "Adidas"
+    },
+    {
+        "id": 9,
+        "name": "Forum 84 Low ADV",
+        "price": 14000,
+        "imgUrl": "public/images/Adidas/Forum 84 Low ADV.png",
+        "categorie": "Adidas"
+    },
+    {
+        "id": 10,
+        "name": "Gazelle Bold",
+        "price": 14000,
+        "imgUrl": "/images/Adidas/Gazelle Bold.png",
+        "categorie": "Adidas"
+    },
+    {
+        "id": 11,
+        "name": "NMD_R1 Primeblue",
+        "price": 14000,
+        "imgUrl": "/images/Adidas/NMD_R1 Primeblue.png",
+        "categorie": "Adidas"
+    },
+    {
+        "id": 12,
+        "name": "Stan Smith Bonega 2B",
+        "price": 14000,
+        "imgUrl": "/images/Adidas/Stan Smith Bonega 2B.png",
+        "categorie": "Adidas"
+    },
+    {
+        "id": 13,
+        "name": "Swift Run",
+        "price": 14000,
+        "imgUrl": "/images/Adidas/Swift Run.png",
+        "categorie": "Adidas"
+    },
+    {
+        "id": 14,
+        "name": "BMW M Motorsport Electron E",
+        "price": 14000,
+        "imgUrl": "/images/Puma/BMW M Motorsport Electron E.png",
+        "categorie": "Puma"
+    },
+    {
+        "id": 15,
+        "name": "Puma-Punch Comfort",
+        "price": 14000,
+        "imgUrl": "/images/Puma/Puma-Punch Comfort.png",
+        "categorie": "Puma"
+    },
+    {
+        "id": 16,
+        "name": "Scorch Mark Slip On Men's",
+        "price": 14000,
+        "imgUrl": "/images/Puma/Scorch Mark Slip On Men's.png",
+        "categorie": "Puma"
+    },
+    {
+        "id": 17,
+        "name": "Stride Unisex Sneakers",
+        "price": 14000,
+        "imgUrl": "/images/Puma/Stride Unisex Sneakers.png",
+        "categorie": "Puma"
+    },
+    {
+        "id": 18,
+        "name": "Teveris Nitro Noughties.png",
+        "price": 14000,
+        "imgUrl": "/images/Puma/Teveris Nitro Noughties.png",
+        "categorie": "Puma"
+    },
+    {
+        "id": 19,
+        "name": "Voyage Nitro 2 Men's.png",
+        "price": 14000,
+        "imgUrl": "/images/Puma/Voyage Nitro 2 Men's.png",
+        "categorie": "Puma"
     }
 ]

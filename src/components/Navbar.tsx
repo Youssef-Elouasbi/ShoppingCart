@@ -9,7 +9,7 @@ const NavBar = () => {
         <NavbarBs sticky='top' className='bg-white shadow-sm mb-3'>
             <Container>
                 <Nav className="me-auto d-flex align-items-center ">
-                    <img src="images/Logo1.png" style={{ width: "50px", height: "50px" }} />
+                    <img src="images/Logo3.png" style={{ width: "50px", height: "50px" }} />
                     <Nav.Link to="/" as={Link} >Home</Nav.Link>
                     <Nav.Link to="/Store" as={Link} >Store</Nav.Link>
                     <Nav.Link to="/About" as={Link} >About</Nav.Link>
