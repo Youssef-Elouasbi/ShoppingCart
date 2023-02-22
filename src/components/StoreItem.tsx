@@ -3,6 +3,7 @@ import { Card, Button } from "react-bootstrap"
 import { useShoppingCart } from '../context/ShoppingCartContext'
 import formatCurrency from '../utilities/formatCurrency'
 import { FaShoppingCart } from 'react-icons/fa';
+import { useDarkMode } from '../context/DarkModeContext';
 
 type Product = {
     id: number,
@@ -12,10 +13,11 @@ type Product = {
 
 }
 const StoreItem = ({ id, name, price, imgUrl }: Product) => {
+    const { Dark } = useDarkMode()
     const { getItemQuantity, increaseItemQuantity, decreaseItemQuantity, removeFromCart, addToCart } = useShoppingCart()
     const quantity: number = getItemQuantity(id);
     return (
-        <Card className='h-100'>
+        <Card className={'h-100 ' + (Dark === true && 'bg-black text-white')} style={{ boxShadow: (Dark === true ? "0px 0px 22px grey" : "") }}>
             <Card.Img variant="top" src={imgUrl} height="200px" style={{ objectFit: "cover" }} />
             <Card.Body className="d-flex flex-column" >
                 <Card.Title className='d-flex justify-content-between align-items-baseline mb-4'>

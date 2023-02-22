@@ -1,19 +1,44 @@
-import React from 'react'
-import { Navbar as NavbarBs, Container, Nav, Button } from "react-bootstrap"
+import React, { useEffect, useState } from 'react'
+import { Navbar as NavbarBs, Container, Nav, Button, Form } from "react-bootstrap"
 import { NavLink as Link } from "react-router-dom"
 import { useShoppingCart } from '../context/ShoppingCartContext'
+import { MdDarkMode, MdOutlineDarkMode } from 'react-icons/md'
+import { BsSunFill } from 'react-icons/bs'
+import { useDarkMode } from '../context/DarkModeContext'
+import { IconContext } from 'react-icons'
 
 const NavBar = () => {
     const { cartQuantity, OpenCart } = useShoppingCart()
+    const { Dark, setDark } = useDarkMode()
+    function changeStatus({ target: { value } }: any) {
+        setDark(!Dark)
+    }
+    useEffect(() => {
+        return Dark === true ? document.body.classList.add('bg-black') : document.body.classList.remove('bg-black')
+    }, [Dark])
     return (
-        <NavbarBs sticky='top' className='bg-white shadow-sm mb-3'>
+        <NavbarBs sticky='top' className={(Dark === true ? "bg-black " : "bg-white ") + " mb-3"}
+            style={{ boxShadow: (Dark === true ? "0px 1px 20px white" : "0px 1px 10px gray") }}>
             <Container>
                 <Nav className="me-auto d-flex align-items-center ">
                     <img src="images/Logo3.png" style={{ width: "50px", height: "50px" }} />
-                    <Nav.Link to="/" as={Link} >Home</Nav.Link>
-                    <Nav.Link to="/Store" as={Link} >Store</Nav.Link>
-                    <Nav.Link to="/About" as={Link} >About</Nav.Link>
+                    <Nav.Link className={(Dark === true && "text-white") + ""} to="/" as={Link} >Home</Nav.Link>
+                    <Nav.Link className={(Dark === true && "text-white") + ""} to="/Store" as={Link} >Store</Nav.Link>
+                    {/* <Nav.Link className={(Dark === true && "text-white") + ""} to="/About" as={Link} >About</Nav.Link> */}
                 </Nav>
+                <Form className='d-flex justify-content-between align-items-center mx-3'>
+                    <Form.Check
+                        type="switch"
+                        checked={Dark === true}
+                        onChange={changeStatus}
+                    />
+                    {Dark === true ? <IconContext.Provider
+                        value={{ color: 'yellow' }}
+                    >
+                        {/* <MdOutlineDarkMode /> */}
+                        <BsSunFill />
+                    </IconContext.Provider> : <MdDarkMode />}
+                </Form>
                 {
                     cartQuantity > 0 &&
                     <Button style={{ width: "3.2rem", height: "3.2rem", position: "relative" }} variant="outline-success" className='rounded-circle' onClick={OpenCart}>
@@ -21,8 +46,10 @@ const NavBar = () => {
                         <div className="rounded-circle bg-danger d-flex justify-content-center align-items-center" style={{ color: "white", width: "1.5rem", height: "1.5rem", position: "absolute", bottom: 0, right: 0, transform: "translate(25%, 25%)" }}>{cartQuantity}</div>
                     </Button>
                 }
+
+
             </Container>
-        </NavbarBs>
+        </NavbarBs >
     )
 }
 

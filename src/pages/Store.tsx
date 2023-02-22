@@ -3,6 +3,7 @@ import { Button, Col, Container, Row, ToggleButton, ToggleButtonGroup } from "re
 import StoreItem from '../components/StoreItem'
 import storeItems from "../data/items.json"
 import Spinner from 'react-bootstrap/Spinner'
+import { useDarkMode } from '../context/DarkModeContext'
 type Item = {
     id: number,
     name: string,
@@ -12,7 +13,7 @@ type Item = {
 }
 
 const Store = () => {
-
+    const { Dark } = useDarkMode()
     const [categorie, setCategorie] = useState("All")
     const [Items, setItems] = useState(storeItems)
     const [Ready, setReady] = useState(false)
@@ -44,24 +45,25 @@ const Store = () => {
         setTimeout(() => {
             setReady(true)
             setItems(() => GenerateItems())
-        }, 1000)
+        }, 2000)
     }, [categorie])
+
     return (
         <>
-            <h1>Store</h1>
+            <h1 className={(Dark === true ? "text-white " : "text-black ") + " d-flex justify-content-center"}>Shoes</h1>
             <Row className='my-3 '>
-                <span className='fs-4'>Filter : </span>
+                <span className={(Dark === true && "text-white") + ' fs-4'}>Filter : </span>
                 <ToggleButtonGroup type="radio" name="options" defaultValue={"All"}>
-                    <ToggleButton id="tbg-radio-1" value={"All"} className='m-2 rounded' variant='outline-secondary' onClick={() => setCategorie("All")}>
+                    <ToggleButton id="tbg-radio-1" value={"All"} className={'m-2 rounded ' + (Dark === true && 'text-white border border-gray')} variant='outline-secondary' onClick={() => setCategorie("All")}>
                         All
                     </ToggleButton>
-                    <ToggleButton id="tbg-radio-2" value={"Cat1"} className='m-2 rounded' variant='outline-secondary' onClick={() => setCategorie("Nike")}>
+                    <ToggleButton id="tbg-radio-2" value={"Cat1"} className={'m-2 rounded ' + (Dark === true && 'text-white border border-gray')} variant='outline-secondary' onClick={() => setCategorie("Nike")}>
                         Nike
                     </ToggleButton>
-                    <ToggleButton id="tbg-radio-3" value={"Cat2"} className='m-2 rounded' variant='outline-secondary' onClick={() => setCategorie("Adidas")}>
+                    <ToggleButton id="tbg-radio-3" value={"Cat2"} className={'m-2 rounded ' + (Dark === true && 'text-white border border-gray')} variant='outline-secondary' onClick={() => setCategorie("Adidas")}>
                         Adidas
                     </ToggleButton>
-                    <ToggleButton id="tbg-radio-4" value={"Cat3"} className='m-2 rounded' variant='outline-secondary' onClick={() => setCategorie("Puma")}>
+                    <ToggleButton id="tbg-radio-4" value={"Cat3"} className={'m-2 rounded ' + (Dark === true && 'text-white border border-gray')} variant='outline-secondary' onClick={() => setCategorie("Puma")}>
                         Puma
                     </ToggleButton>
 
