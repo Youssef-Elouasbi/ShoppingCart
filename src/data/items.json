@@ -1,134 +1,134 @@
 [
     {
-        "id": 1,
+        "id": "price_1MeRGkLr18XFKfiyQDDNcGNk",
         "name": "Air Jordan 1 Mid SE",
-        "price": 10.99,
+        "price": 150.00,
         "imgUrl": "/images/Nike/Air Jordan 1 Mid SE.png",
         "categorie": "Nike"
     },
     {
-        "id": 2,
+        "id": "price_1MedXMLr18XFKfiypNC1tL4p",
         "name": "Air Jordan 5 Retro SE",
-        "price": 1199,
+        "price": 110.00,
         "imgUrl": "/images/Nike/Air Jordan 5 Retro SE.png",
         "categorie": "Nike"
     },
     {
-        "id": 3,
+        "id": "price_1MedasLr18XFKfiyWL5XLACb",
         "name": "Nike Aire Force",
-        "price": 1.05,
+        "price": 209.00,
         "imgUrl": "/images/Nike/Nike Aire Force.png",
         "categorie": "Nike"
     },
     {
-        "id": 4,
+        "id": "price_1MedboLr18XFKfiypl12h11u",
         "name": "Nike Aire VaporaMax 2021 FK",
-        "price": 14000,
+        "price": 99.99,
         "imgUrl": "/images/Nike/Nike Aire VaporaMax 2021 FK.png",
         "categorie": "Nike"
     },
     {
-        "id": 5,
+        "id": "price_1MedceLr18XFKfiyq5XR0eVq",
         "name": "Nike Aire Zoom Flight 95",
-        "price": 14000,
+        "price": 180.00,
         "imgUrl": "/images/Nike/Nike Aire Zoom Flight 95.png",
         "categorie": "Nike"
     },
     {
-        "id": 6,
+        "id": "price_1MeddpLr18XFKfiyFkJNmmOg",
         "name": "Nike invincible 3",
-        "price": 14000,
+        "price": 149.99,
         "imgUrl": "/images/Nike/Nike invincible 3.png",
         "categorie": "Nike"
     },
     {
-        "id": 7,
+        "id": "price_1MedenLr18XFKfiyCcQ7oxlX",
         "name": "Nike ZoomX Dragonfly",
-        "price": 14000,
+        "price": 199.99,
         "imgUrl": "/images/Nike/Nike ZoomX Dragonfly.png",
         "categorie": "Nike"
     },
     {
-        "id": 8,
+        "id": "price_1MedfYLr18XFKfiy32KD25Rc",
         "name": "Busentiz Pro",
-        "price": 14000,
+        "price": 160.00,
         "imgUrl": "/images/Adidas/Busentiz Pro.png",
         "categorie": "Adidas"
     },
     {
-        "id": 9,
+        "id": "price_1MedgjLr18XFKfiyZFbkASGc",
         "name": "Forum 84 Low ADV",
-        "price": 14000,
+        "price": 89.99,
         "imgUrl": "public/images/Adidas/Forum 84 Low ADV.png",
         "categorie": "Adidas"
     },
     {
-        "id": 10,
+        "id": "price_1MedhPLr18XFKfiyF6lyFsei",
         "name": "Gazelle Bold",
-        "price": 14000,
+        "price": 170.00,
         "imgUrl": "/images/Adidas/Gazelle Bold.png",
         "categorie": "Adidas"
     },
     {
-        "id": 11,
+        "id": "price_1Medi9Lr18XFKfiyNutWQTuC",
         "name": "NMD_R1 Primeblue",
-        "price": 14000,
+        "price": 139.99,
         "imgUrl": "/images/Adidas/NMD_R1 Primeblue.png",
         "categorie": "Adidas"
     },
     {
-        "id": 12,
+        "id": "price_1MediuLr18XFKfiyOGVtUXj1",
         "name": "Stan Smith Bonega 2B",
-        "price": 14000,
+        "price": 150.00,
         "imgUrl": "/images/Adidas/Stan Smith Bonega 2B.png",
         "categorie": "Adidas"
     },
     {
-        "id": 13,
+        "id": "price_1MedjPLr18XFKfiyJP3pElF5",
         "name": "Swift Run",
-        "price": 14000,
+        "price": 149.99,
         "imgUrl": "/images/Adidas/Swift Run.png",
         "categorie": "Adidas"
     },
     {
-        "id": 14,
+        "id": "price_1Medk7Lr18XFKfiyZC6NSW73",
         "name": "BMW M Motorsport Electron E",
-        "price": 14000,
+        "price": 220.00,
         "imgUrl": "/images/Puma/BMW M Motorsport Electron E.png",
         "categorie": "Puma"
     },
     {
-        "id": 15,
+        "id": "price_1MedkvLr18XFKfiyWSTjC3qV",
         "name": "Puma-Punch Comfort",
-        "price": 14000,
+        "price": 120.00,
         "imgUrl": "/images/Puma/Puma-Punch Comfort.png",
         "categorie": "Puma"
     },
     {
-        "id": 16,
+        "id": "price_1MedleLr18XFKfiylHR5qQtF",
         "name": "Scorch Mark Slip On Men's",
-        "price": 14000,
+        "price": 135.00,
         "imgUrl": "/images/Puma/Scorch Mark Slip On Men's.png",
         "categorie": "Puma"
     },
     {
-        "id": 17,
+        "id": "price_1MedmxLr18XFKfiy5UH3R7fF",
         "name": "Stride Unisex Sneakers",
-        "price": 14000,
+        "price": 160.00,
         "imgUrl": "/images/Puma/Stride Unisex Sneakers.png",
         "categorie": "Puma"
     },
     {
-        "id": 18,
-        "name": "Teveris Nitro Noughties.png",
-        "price": 14000,
+        "id": "price_1Medo1Lr18XFKfiyyJEtsT2Z",
+        "name": "Teveris Nitro Noughties",
+        "price": 150.00,
         "imgUrl": "/images/Puma/Teveris Nitro Noughties.png",
         "categorie": "Puma"
     },
     {
-        "id": 19,
-        "name": "Voyage Nitro 2 Men's.png",
-        "price": 14000,
+        "id": "price_1MedpRLr18XFKfiyB2HeJKqI",
+        "name": "Voyage Nitro 2 Men's",
+        "price": 155.00,
         "imgUrl": "/images/Puma/Voyage Nitro 2 Men's.png",
         "categorie": "Puma"
     }

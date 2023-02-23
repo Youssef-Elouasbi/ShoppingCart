@@ -6,17 +6,17 @@ type ShoppingCartProviderProps = {
     children: ReactNode
 }
 type CartItem = {
-    id: number,
+    id: string,
     quantity: number
 }
 type ShoppingCartContext = {
     OpenCart: () => void
     CloseCart: () => void
-    getItemQuantity: (id: number) => number
-    increaseItemQuantity: (id: number) => void
-    decreaseItemQuantity: (id: number) => void
-    removeFromCart: (id: number) => void
-    addToCart: (id: number) => void
+    getItemQuantity: (id: string) => number
+    increaseItemQuantity: (id: string) => void
+    decreaseItemQuantity: (id: string) => void
+    removeFromCart: (id: string) => void
+    addToCart: (id: string) => void
     cartQuantity: number
     cartItems: CartItem[]
 }
@@ -34,18 +34,18 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         setShoppingCartSlide(false)
     }
 
-    function getItemQuantity(id: number) {
+    function getItemQuantity(id: string) {
         return cartItems.find(item => item.id === id)?.quantity || 0
     }
 
-    function addToCart(id: number) {
+    function addToCart(id: string) {
         setCartItems(() => {
             const newItem: CartItem = { id: id, quantity: 1 }
             return [...cartItems, newItem]
         })
     }
 
-    function increaseItemQuantity(id: number) {
+    function increaseItemQuantity(id: string) {
         setCartItems(cartItems => {
             // if (cartItems.find(item => item.id === id) == null) {
             //     return [...cartItems, { id, quantity: 1 }]
@@ -56,7 +56,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
             // }
         })
     }
-    function decreaseItemQuantity(id: number) {
+    function decreaseItemQuantity(id: string) {
         setCartItems(cartItems => {
             if (cartItems.find(item => item.id === id)?.quantity === 1) {
                 return cartItems.filter(item => item.id != id)
@@ -67,7 +67,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
             }
         })
     }
-    function removeFromCart(id: number) {
+    function removeFromCart(id: string) {
         setCartItems((cartItems) => {
             return cartItems.filter((item) => item.id != id)
         }

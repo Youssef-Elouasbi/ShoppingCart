@@ -4,7 +4,7 @@ import { useShoppingCart } from '../context/ShoppingCartContext'
 import storeItems from "../data/items.json"
 import formatCurrency from '../utilities/formatCurrency'
 type CartItemProps = {
-    id: number,
+    id: string,
     quantity: number
 }
 export function CardItem({ id, quantity }: CartItemProps) {

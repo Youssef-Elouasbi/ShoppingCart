@@ -5,7 +5,7 @@ import storeItems from "../data/items.json"
 import Spinner from 'react-bootstrap/Spinner'
 import { useDarkMode } from '../context/DarkModeContext'
 type Item = {
-    id: number,
+    id: string,
     name: string,
     price: number,
     imgUrl: string,

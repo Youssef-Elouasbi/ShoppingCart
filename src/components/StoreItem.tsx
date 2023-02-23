@@ -6,7 +6,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 import { useDarkMode } from '../context/DarkModeContext';
 
 type Product = {
-    id: number,
+    id: string,
     name: string,
     price: number,
     imgUrl: string
@@ -18,7 +18,7 @@ const StoreItem = ({ id, name, price, imgUrl }: Product) => {
     const quantity: number = getItemQuantity(id);
     return (
         <Card className={'h-100 ' + (Dark === true && 'bg-black text-white')} style={{ boxShadow: (Dark === true ? "0px 0px 22px grey" : "") }}>
-            <Card.Img variant="top" src={imgUrl} height="200px" style={{ objectFit: "cover" }} />
+            <Card.Img className={(Dark === true ? 'opacity-75' : '')} variant="top" src={imgUrl} height="200px" style={{ objectFit: "cover" }} />
             <Card.Body className="d-flex flex-column" >
                 <Card.Title className='d-flex justify-content-between align-items-baseline mb-4'>
                     <span className="fs-4">{name}</span>
