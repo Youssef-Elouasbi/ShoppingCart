@@ -5,8 +5,10 @@ import NavBar from './components/Navbar'
 import { DarkModeProvider, useDarkMode } from './context/DarkModeContext'
 import { ShoppingCartProvider } from './context/ShoppingCartContext'
 import About from './pages/About'
+import Cancel from './pages/Cancel'
 import Home from './pages/Home'
 import Store from './pages/Store'
+import Success from './pages/Success'
 function App() {
   const { Dark } = useDarkMode()
   return (
@@ -17,6 +19,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Store" element={<Store />} />
+            <Route path="/success" element={<Success />} />
+            <Route path="/cancel" element={<Cancel />} />
             {/* <Route path="/About" element={<About />} /> */}
           </Routes>
         </Container>
