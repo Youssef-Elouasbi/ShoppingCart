@@ -44,10 +44,13 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
                         Total : {formatCurrency(totalPrice)}
                     </div>
                 </Stack>
-                <Button size="sm" className='w-100 mt-2 fs-5 text-white' style={{ backgroundColor: "#9900ff", border: "1px solid #9900ff" }} onClick={checkout}>
-                    Buy Now <MdPayments />
+                {
+                    cartItems.length != 0 &&
+                    <Button size="sm" className='w-100 mt-2 fs-5 text-white' style={{ backgroundColor: "#9900ff", border: "1px solid #9900ff" }} onClick={checkout}>
+                        Buy Now <MdPayments />
 
-                </Button>
+                    </Button>
+                }
             </Offcanvas.Body>
         </Offcanvas>
     )
