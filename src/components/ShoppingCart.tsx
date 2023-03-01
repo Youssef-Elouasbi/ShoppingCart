@@ -16,7 +16,8 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
     }, 0)
 
     const checkout = async () => {
-        await fetch('http://localhost:4000/checkout', {
+        // http://localhost:4000/checkout
+        await fetch('https://backend-shoppingcart.onrender.com/checkout', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
